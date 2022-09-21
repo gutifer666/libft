@@ -3,24 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: guti <guti@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: frgutier <frgutier@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 23:05:33 by guti              #+#    #+#             */
-/*   Updated: 2022/09/20 23:41:10 by guti             ###   ########.fr       */
+/*   Created: 2022/09/21 08:20:03 by frgutier          #+#    #+#             */
+/*   Updated: 2022/09/21 08:29:51 by frgutier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
-	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
 
@@ -67,6 +65,5 @@ char				*ft_strtrim(char const *s);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
-
 
 #endif
