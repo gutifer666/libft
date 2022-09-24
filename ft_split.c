@@ -6,7 +6,7 @@
 /*   By: frgutier <frgutier@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 19:37:43 by frgutier          #+#    #+#             */
-/*   Updated: 2022/09/19 21:39:33 by frgutier         ###   ########.fr       */
+/*   Updated: 2022/09/24 17:22:16 by frgutier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!s)
-		return (NULL);
 	str = (char **)malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
-	if (!str)
+	if (!s || !str)
 		return (NULL);
 	while (i < ft_count_words(s, c))
 	{
