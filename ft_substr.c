@@ -6,7 +6,7 @@
 /*   By: frgutier <frgutier@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 19:27:21 by frgutier          #+#    #+#             */
-/*   Updated: 2022/09/24 18:12:29 by frgutier         ###   ########.fr       */
+/*   Updated: 2022/09/24 19:44:07 by frgutier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 	size_t	i;
 
-	if (start > ft_strlen(s))
+	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
 	i = 0;
 	str = (char *)malloc(sizeof(char) * (len + 1));
