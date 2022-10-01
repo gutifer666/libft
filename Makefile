@@ -6,7 +6,7 @@
 #    By: frgutier <frgutier@student.42malaga.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/21 08:40:37 by frgutier          #+#    #+#              #
-#    Updated: 2022/09/25 20:19:37 by frgutier         ###   ########.fr        #
+#    Updated: 2022/10/01 17:46:15 by frgutier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	=	 libft.a
 
 CC	=	 gcc
 
-CFLAGS	=	 -Werror -Wall -Wextra
+FLAGS	=	 -Werror -Wall -Wextra
 
 AR	=	 ar -rcs
 
@@ -73,16 +73,16 @@ $(NAME)	: 	$(OBJS) libft.h
 	$(AR) $(NAME) $(OBJS)
 
 %.o	:	%.c
-	$(CC) $(CFLAGS) -c $< -o $@ -I.
+	$(CC) $(FLAGS) -c $< -o $@
 
 bonus	:	$(OBJS) $(OBJ_BONUS) libft.h
 	$(AR) $(NAME) $(OBJ_BONUS) $(OBJS)
 
 clean	:
-	rm -rf $(OBJS) $(OBJ_BONUS)
+	rm -f $(OBJS) $(OBJ_BONUS)
 
 fclean	: 	clean
-	rm -rf $(NAME)
+	rm -f $(NAME)
 
 re	:	fclean all
 
