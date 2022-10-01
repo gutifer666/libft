@@ -2,7 +2,7 @@
 C library for 42 School
 Javier Gutiérrez
 
-# mask branh
+# mask branch
 
 ## Functions
 
